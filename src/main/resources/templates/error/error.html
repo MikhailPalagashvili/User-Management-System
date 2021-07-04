@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Error</title>
+	</head>
+	<body>
+		<!-- Status contains the error code and error displays a summary of the error -->
+		<h1 th:text="${status} + '' + ${error}"></h1>
+		<p th:text="${message}"></p>
+		<p>Please return to the login screen</p>
+		<form method="post" th:action="@{/logout}">
+			<button class="btn btn-link" type="submit">Return to login screen</button>
+		</form>
+	</body>
+</html>
